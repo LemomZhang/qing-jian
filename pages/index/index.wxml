@@ -1,0 +1,5 @@
+<!--pages/index.wxml-->
+<view>
+  <m-like/>  
+</view>
+<text>pages/index.wxml</text>
