@@ -9,35 +9,46 @@ Component({
   properties: {
     music:Array,
     idd:Number,
+    isPlay:Array
   },
 
   /**
    * 组件的初始数据
    */
   data: {
+
     pauseSrc:'img/pause.png',
     playSrc:'img/play.png',
-    isPlay:false,
-    title:''
   },
-
   /**
    * 组件的方法列表
    */
   methods: {
     onPlay(e){
-      if(!this.data.isPlay){
-        this.setData({
-          isPlay:true
-        })
-        aud.title = this.properties.music[this.properties.idd].name
-        aud.src = this.properties.music[this.properties.idd].play_url
+      let idd = e.currentTarget.dataset.id
+      if (!this.properties.isPlay[idd]){
+        // this.setData({
+        //   isPlay:true
+        // })
+        for(let i=0;i<this.properties.isPlay.length;i++){
+          if(i===idd){
+            this.properties.isPlay[i] = true
+          }else{
+            this.properties.isPlay[i] = false
+          }
+       
+        }
+        aud.title = this.properties.music[idd].name
+        aud.src = this.properties.music[idd].play_url
+        console.log(this.properties.isPlay)
       }else{
-        this.setData({
-          isPlay: false
-        })
-        aud.pause()
+        // this.setData({
+        //   isPlay: false
+        // })
+        this.properties.isPlay[idd] = false
+       aud.pause()
+        console.log(this.properties.isPlay)
       }
-    }
+    },
   }
 })

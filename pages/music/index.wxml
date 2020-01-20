@@ -4,7 +4,7 @@
     <m-time/>
     <m-like/>
   </view>
-  <m-music idd="{{index}}" music="{{music}}"/>  
+  <m-music idd="{{index}}" isPlay="{{isPlay}}" music="{{music}}"/>  
   <view class="toggle">
     <m-toggle bind:change="getid" music="{{music}}"/>
   </view>

@@ -9,6 +9,7 @@
   height: 422rpx;
   margin-top: 60rpx;
   border-radius: 50%;
+  animation:circle 20s infinite linear;
 }
 .player-img{
   width: 64rpx;
@@ -25,4 +26,12 @@
 }
 .music-content{
       max-width: 500rpx;
+}
+@keyframes circle{
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }

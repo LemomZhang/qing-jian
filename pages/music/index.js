@@ -7,24 +7,31 @@ Page({
    * 页面的初始数据
    */
   data: {
+    isPlay:[],
     index:0,
     music:[]
   },
   getid(e){
     this.setData({
-      index:e.detail.id
+      index:e.detail.id,
     })
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     wx.showLoading({
       title: '加载中',
     })
     ms.getMusic((res)=>{
+      for (let i = 0; i < res.data.length; i++) {
+        this.data.isPlay[i] = false
+      }
       this.setData({
-        music:res.data
+        music:res.data,
+        isPlay:this.data.isPlay
       })
       wx.hideLoading()
     })

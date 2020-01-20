@@ -22,7 +22,7 @@ Component({
     id: 0,
     isMovie: true,
     isSentence: true,
-    isMusic:true
+    isMusic: true
   },
 
   /**
@@ -30,16 +30,30 @@ Component({
    */
   methods: {
     previous(e) {
-      if (this.data.id != 0) {
+      if (!this.properties.music) {
+        if (this.data.id != 0) {
+          this.setData({
+            id: this.data.id - 1
+          })
+          this.triggerEvent('change', {
+            id: this.data.id
+          }, {
+            bubbles: true,
+            composed: true
+          })
+        }
+      } else {
+        if (this.data.id != 0) {
         this.setData({
           id: this.data.id - 1
         })
         this.triggerEvent('change', {
-          id: this.data.id
+          id: this.data.id,
         }, {
           bubbles: true,
           composed: true
         })
+        }
       }
 
     },
@@ -61,7 +75,7 @@ Component({
       if (this.properties.sentence) {
         if (this.data.id < this.properties.sentence.length - 1) {
           this.setData({
-            id: this.data.id + 1
+            id: this.data.id + 1,
           })
           this.triggerEvent('change', {
             id: this.data.id
@@ -77,11 +91,12 @@ Component({
             id: this.data.id + 1
           })
           this.triggerEvent('change', {
-            id: this.data.id
+            id: this.data.id,
+
           }, {
-              bubbles: true,
-              composed: true
-            })
+            bubbles: true,
+            composed: true
+          })
         }
       }
     }
