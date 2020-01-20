@@ -1,0 +1,12 @@
+<!--pages/index.wxml-->
+<view class="box">
+  <view class="container">
+    <m-time/>
+    <m-like/>
+  </view>
+  <m-movie idd="{{index}}" movies="{{movies}}"/>  
+  <view class="toggle">
+    <m-toggle bind:change="getid" movies="{{movies}}"/>
+  </view>
+</view>
+

@@ -1,18 +1,30 @@
 // pages/index.js
+import {Movie} from '../../modules/movie/movie.js'
+let movie = new Movie()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    movies:[],
+    index:0
   },
-
+  getid(e){
+    let id = e.detail.id
+    this.setData({
+      index:id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    movie.getMovies((res)=>{
+      this.setData({
+        movies:res.data
+      })
+    })
   },
 
   /**

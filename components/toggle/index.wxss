@@ -1,0 +1,25 @@
+/* components/toggle/index.wxss */
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500rpx;
+  height: 80rpx;
+  padding: 10rpx 34rpx;
+  margin: 6rpx;
+  border-radius: 10rpx;
+  background-color: rgba(240, 240, 240,.3);
+
+}
+.left{
+  width: 54rpx;
+  height: 54rpx;
+}
+.right{
+  width: 54rpx;
+  height: 54rpx;
+}
+.text{
+  font-size: 24rpx;
+  padding: 0 14rpx;
+}

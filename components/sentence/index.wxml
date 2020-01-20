@@ -1,0 +1,7 @@
+<!--components/sentence/index.wxml-->
+<view class="sentence-container">
+  <image class="img" src="{{sentence[idd].cover}}"></image>
+  <text class="text">摄影 | {{sentence[idd].auth}} | {{sentence[idd].date}}   </text>
+  <image class="img-text" src="img/sentence.png"></image>
+  <text class="sentence-content">{{sentence[idd].title}}</text>
+</view>

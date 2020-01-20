@@ -1,0 +1,27 @@
+/* components/sentence/index.wxss */
+/* components/movie/index.wxss */
+.sentence-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img{
+  width: 750rpx;
+  height: 500rpx;
+}
+.img-text{
+  width: 46rpx;
+  height: 142rpx;
+  position: relative;
+  right: 320rpx;
+  bottom: 88rpx;
+}
+.sentence-content{
+  max-width: 500rpx;
+}
+.text{
+  color: #808080;
+  font-size: 20rpx;
+  position: relative;
+  margin-top: 6rpx;
+}

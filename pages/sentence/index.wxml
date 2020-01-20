@@ -1,0 +1,11 @@
+<!--pages/sentence/index.wxml-->
+<view class="box">
+  <view class="container">
+    <m-time/>
+    <m-like/>
+  </view>
+  <m-sentence idd="{{index}}" sentence="{{sentence}}"/>  
+  <view class="toggle">
+    <m-toggle bind:change="getid" sentence="{{sentence}}"/>
+  </view>
+</view>

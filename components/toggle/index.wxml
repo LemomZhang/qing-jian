@@ -1,0 +1,20 @@
+<!--components/toggle/index.wxml-->
+<!-- 电影 -->
+<view class="container" hidden="{{movies?!isMovie:isMovie}}">
+  <image bind:tap="previous" class="left" src="{{id==0?leftNone:leftSrc}}"></image>
+  <text class="text" wx:for="{{movies}}" wx:key="{{id}}" hidden="{{index===id?false:true}}">{{item.title}}</text>
+  <image bind:tap="next" class="right" src="{{id==movies.length-1?rightNone:rightSrc}}"></image>
+</view>
+<!-- 句子 -->
+<view class="container" hidden="{{sentence?!isSentence:isSentence}}">
+  <image bind:tap="previous" class="left" src="{{id==0?leftNone:leftSrc}}"></image>
+  <text class="text" wx:for="{{sentence}}" wx:key="{{id}}" hidden="{{index===id?false:true}}">{{item.title}}</text>
+  <image bind:tap="next" class="right" src="{{id==sentence.length-1?rightNone:rightSrc}}"></image>
+</view>
+<!-- 音乐 -->
+<view class="container" hidden="{{music?!isMusic:isMusic}}">
+  <image bind:tap="previous" class="left" src="{{id==0?leftNone:leftSrc}}"></image>
+  <text class="text" wx:for="{{music}}" wx:key="{{id}}" hidden="{{index===id?false:true}}">{{item.name}}</text>
+  <image bind:tap="next" class="right" src="{{id==music.length-1?rightNone:rightSrc}}"></image>
+</view>
+

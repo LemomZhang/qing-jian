@@ -1,0 +1,6 @@
+<!--components/movie/index.wxml-->
+<view class="movie-container">
+  <image  class="img" src="{{movies[idd].cover}}"></image>
+  <image class="img-text" src="img/movie.png"></image>
+  <text class="movie-content">{{movies[idd].title}}</text>
+</view>

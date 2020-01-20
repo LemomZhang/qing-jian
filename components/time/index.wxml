@@ -1,0 +1,5 @@
+<!--components/time/index.wxml-->
+<view class="time-container">
+  <text class="time-month">{{month}}</text>
+  <text class="time-year">{{year}}</text>
+</view>

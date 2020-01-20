@@ -1,12 +1,43 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/music/index",
+    "pages/movie/index",
+    "pages/sentence/index"
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "一纸轻笺",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "list": [
+      {
+        "pagePath": "pages/music/index",
+        "text": "音乐",
+        "iconPath": "imgs/tab/musicblack.png",
+        "selectedIconPath": "imgs/tab/music.png"
+      },
+      {
+        "pagePath": "pages/movie/index",
+        "text": "电影",
+        "iconPath": "imgs/tab/movieblack.png",
+        "selectedIconPath": "imgs/tab/movie.png"
+      },
+      {
+        "pagePath": "pages/sentence/index",
+        "text": "句子",
+        "iconPath": "imgs/tab/sentenceblack.png",
+        "selectedIconPath": "imgs/tab/sentence.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

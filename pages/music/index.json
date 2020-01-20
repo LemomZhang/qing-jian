@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "m-like": "/components/like/like",
+    "m-time": "/components/time/index",
+    "m-music": "/components/music/index",
+    "m-toggle": "/components/toggle/index"
+  }
+}

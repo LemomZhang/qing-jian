@@ -1,2 +1,6 @@
 <!--components/like/like.wxml-->
-<text>components/like/like.wxml</text>
+<view class="like">
+  <image  bindtap="toChange"  src="{{isLike?fillSrc:blackSrc}}"></image>
+  <text>{{num}}</text>
+</view>
+

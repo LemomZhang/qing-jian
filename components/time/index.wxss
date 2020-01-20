@@ -1,0 +1,6 @@
+/* components/time/index.wxss */
+.time-container{
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 20rpx;
+}

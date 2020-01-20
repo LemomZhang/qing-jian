@@ -1,1 +1,16 @@
 /* components/like/like.wxss */
+.like{
+  display: inline-flex;
+  padding: 6px;
+}
+.like>image{
+  width: 38rpx;
+  height: 38rpx;
+}
+.like>text{
+  font-size: 26rpx;
+  line-height: 26rpx;
+  position: relative;
+  bottom: 12rpx;
+  color: #707070;
+}
