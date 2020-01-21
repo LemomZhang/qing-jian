@@ -1,7 +1,7 @@
 <!--components/music/index.wxml-->
 <view class="music-container">
 <image class="img" src="{{music[idd].head_url}}"/>
-<image class="player-img" data-id="{{idd}}" bindtap="onPlay" src="{{isPlay[idd]?pauseSrc:playSrc}}"></image>
+<image class="player-img" data-id="{{idd}}" bindtap="onPlay" src="{{play[idd]?pauseSrc:playSrc}}"></image>
 <image class="img-text" src="img/music.png"></image>
 <text class="music-content">{{music[idd].title}}</text>
 </view>
